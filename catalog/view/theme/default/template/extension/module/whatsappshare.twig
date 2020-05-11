@@ -1,0 +1,14 @@
+
+<div class="whatsappshare-container"></div>
+<script type="text/javascript">
+$(".whatsappshare-container").load("index.php?route=extension/module/whatsappshare/getindex&product_id={{product_id}}");
+$( document ).ready(function() {
+    var url='whatsapp://send?text='+'{{url_1}}'+encodeURIComponent('{{url_2}}');  
+	$("#whatsappshare-bth").prop("href",url);
+});
+</script>
+
+
+{% if is_device_mobile == 1 %}
+   <a id="whatsappshare-bth"><img src="{{img_src}}" height="{{img_height}}" width="{{img_width}}" ></a>
+   {%endif%}

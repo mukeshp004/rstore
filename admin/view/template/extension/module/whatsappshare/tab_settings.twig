@@ -1,0 +1,101 @@
+<table id="Settings" class="table">
+    <tr>
+        <td class="col-xs-3">
+        	<h5><strong>{{ text_image_dimensions }}</strong></h5>
+            <span class="help"><i class="fa fa-info-circle"></i>&nbsp;{{ text_image_dimensions_help }}</span></td>
+        <td class="col-xs-9">
+            <div class="col-xs-4">
+                <div class="input-group">
+                  <span class="input-group-addon">Width:&nbsp;</span>
+                  <input type="text" class="form-control" name="{{ moduleNameSmall }}[ImageWidth]" value="{% if moduleData['ImageWidth'] is defined %}{{moduleData['ImageWidth']}}{%else%}100{%endif%}" />
+                  <span class="input-group-addon">{{ text_pixels }}</span>
+                </div><br />
+                <div class="input-group">
+                  <span class="input-group-addon">Height:</span>
+                  <input type="text" class="form-control" name="{{ moduleNameSmall }}[ImageHeight]" value="{% if moduleData['ImageHeight'] is defined %}{{moduleData['ImageHeight']}}{%else%}100{%endif%}" />
+                  <span class="input-group-addon">{{ text_pixels }}</span>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+<tr>
+        <td class="col-xs-3">
+            <h5><strong>{{ text_button_preview }}</strong></h5>
+            
+        </td>
+        <td class="col-xs-3">    
+        <div class="col-xs-4" style="text-align: center">
+        {% set imgWidth = moduleData['ImageWidth'] %}
+        {% set imgHeight = moduleData['ImageHeight'] %}
+		{% if moduleData['ImageWidth'] is empty and moduleData['ImageHeight'] is empty %}
+      {% set imgWidth = "100" %}
+       {% set imgHeight = "100" %}
+     
+     {%endif%}
+               <img id="img" width="{{ imgWidth }}" height="{{ imgHeight }}" border="0" > 
+         </div>
+        </td>                 
+        </tr>
+     <script>        
+        $(document).ready(function() {
+            $("#img").attr("src", "{{ HTTPS_SERVER ~ "view/image/whatsappshare/" }}"+$("select#input-status option:selected").val());
+                        
+            $("#input-status").change(function() {                          
+                
+                $("#img").attr("src", "{{ HTTPS_SERVER ~ "view/image/whatsappshare/" }}"+$("select#input-status option:selected").val());         
+            });
+        });         
+    </script>    
+
+     <!-- End Preview -->
+      
+     <!-- Design -->  
+
+    <tr>
+        <td class="col-xs-3">
+            <h5><strong>{{ text_button_design }}</strong></h5>
+            <span class="help"><i class="fa fa-info-circle"></i>&nbsp;{{ text_button_design_help }}</span>
+        </td>
+        <td class="col-xs-3">
+            <div class="col-xs-4">
+                    <select name="{{ moduleNameSmall }}[ButtonDesign]" id="input-status" class="form-control">
+                    <option value="logo-color.png" {{ moduleData['ButtonDesign'] is not empty  and (moduleData['ButtonDesign'] == 'logo-color.png') ? 'selected=selected' : '' }} id="Color button">{{ color_button }}</option>
+                    <option value="logo-bw.png" {{ moduleData['ButtonDesign'] is not empty  and (moduleData['ButtonDesign'] == 'logo-bw.png') ? 'selected=selected' : '' }} id="Black and white button">{{ bw_button }}</option>                           
+                </select>
+             </div>
+         </td>
+    </tr>
+
+	<tr>
+        <td class="col-xs-3">
+        	<h5><strong>{{ whatsappshare }}</strong></h5>
+            <span class="help"><i class="fa fa-info-circle"></i>&nbsp;{{ whatsappshare_help }}</span></td>
+            
+    
+        <td class="col-xs-9">
+<ul class="nav nav-tabs popup_tabs">
+		{% for language in languages %}
+			<li><a href="#tab-{{ moduleNameSmall }}-{{ language['code'] }}" data-toggle="tab">
+            <img src="language/{{ language['code'] }}/{{ language['code'] }}.png"/>
+      {{ language['name'] }}</a></li>
+		{% endfor %}
+	</ul>
+    <div class="tab-content">
+		{% for language in languages %}
+            <div id="tab-{{ moduleNameSmall }}-{{ language['code'] }}" language-id="{{ language['code'] }}" class="row-fluid tab-pane language">
+                         <div class="row">
+             
+                    <div class="col-md-9">
+                    
+                        <textarea rows="8" cols="60" id="message_{{ moduleNameSmall }}_{{ language['code'] }}" name="{{ moduleNameSmall }}[content][{{ language['code'] }}]">{{ (moduleData['content'][language['code']]) is not empty ? moduleData['content'][language['code']] : '' }}</textarea>
+                    </div>
+                </div>
+                <br />
+               
+			</div>
+        {% endfor %}
+	</div>
+        </td>
+    </tr>
+</table>
