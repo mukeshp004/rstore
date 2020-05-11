@@ -1,0 +1,28 @@
+<div class="search-bar-top" id="search">
+  <div class="search-bar">
+    <select name="catgory">
+      <option selected="selected">
+        All Category
+      </option>
+      <option>
+        watch
+      </option>
+      <option>
+        mobile
+      </option>
+      <option>
+        kid’s item
+      </option>
+    </select>
+    {# <form action="{{ base }}index.php?route=product/search"> #}
+      <input type="search"
+        name="search"
+        value="{{ search }}"
+        placeholder="{{ text_search }}"
+        class="form-control input-lg" />
+      <button class="btnn">
+        <i class="ti-search"></i>
+      </button>
+    {# </form> #}
+  </div>
+</div>

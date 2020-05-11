@@ -1,0 +1,41 @@
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_product_limit in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 335
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_product_description_length in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 339
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_category_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 343
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_thumb_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 347
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_popup_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 351
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_product_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 355
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_additional_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 359
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_related_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 363
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_compare_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 367
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_wishlist_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 371
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_cart_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 375
+2020-05-08 16:45:35 - PHP Notice:  Undefined index: theme_eshop_image_location_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 379
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_product_limit in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 335
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_product_description_length in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 339
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_category_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 343
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_thumb_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 347
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_popup_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 351
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_product_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 355
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_additional_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 359
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_related_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 363
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_compare_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 367
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_wishlist_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 371
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_cart_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 375
+2020-05-08 16:49:08 - PHP Notice:  Undefined index: theme_eshop_image_location_width in /opt/lampp/htdocs/mukesh/rstore/admin/controller/extension/theme/eshop.php on line 379
+2020-05-08 17:39:31 - PHP Warning:  fopen(/opt/lampp/htdocs/mukesh/rstore/storage/cache/cache.catalog.language.1588963171): failed to open stream: No such file or directory in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 49
+2020-05-08 17:39:31 - PHP Warning:  flock() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 51
+2020-05-08 17:39:31 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 53
+2020-05-08 17:39:31 - PHP Warning:  fflush() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 55
+2020-05-08 17:39:31 - PHP Warning:  flock() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 57
+2020-05-08 17:39:31 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 59
+2020-05-08 17:39:31 - PHP Warning:  fopen(/opt/lampp/htdocs/mukesh/rstore/storage/cache/cache.currency.1588963171): failed to open stream: No such file or directory in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 49
+2020-05-08 17:39:31 - PHP Warning:  flock() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 51
+2020-05-08 17:39:31 - PHP Warning:  fwrite() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 53
+2020-05-08 17:39:31 - PHP Warning:  fflush() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 55
+2020-05-08 17:39:31 - PHP Warning:  flock() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 57
+2020-05-08 17:39:31 - PHP Warning:  fclose() expects parameter 1 to be resource, bool given in /opt/lampp/htdocs/mukesh/rstore/system/library/cache/file.php on line 59
+2020-05-09 3:25:11 - PHP Notice:  Undefined variable:  in /opt/lampp/htdocs/mukesh/rstore/helper.php on line 4
+2020-05-09 3:25:11 - PHP Notice:  Undefined variable:  in /opt/lampp/htdocs/mukesh/rstore/helper.php on line 12
+2020-05-09 3:25:41 - PHP Notice:  Undefined variable:  in /opt/lampp/htdocs/mukesh/rstore/helper.php on line 4
+2020-05-09 3:25:41 - PHP Notice:  Undefined variable:  in /opt/lampp/htdocs/mukesh/rstore/helper.php on line 12
+2020-05-09 4:12:03 - PHP Warning:  Use of undefined constant cart - assumed 'cart' (this will throw an Error in a future version of PHP) in /opt/lampp/htdocs/mukesh/rstore/catalog/controller/common/cart.php on line 135

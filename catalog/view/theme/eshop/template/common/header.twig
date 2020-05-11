@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html dir="{{ direction }}" lang="{{ lang }}">
+<head>
+	<!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='copyright' content=''>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Title Tag  -->
+    <title>{{ title }}</title>
+
+<base href="{{ base }}" />
+
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/favicon.png">
+	<!-- Web Font -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+	
+	<!-- StyleSheet -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="catalog/view/theme/eshop/css/bootstrap.css">
+	<!-- Magnific Popup -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/magnific-popup.min.css">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/font-awesome.css">
+	<!-- Fancybox -->
+	<link rel="stylesheet" href="catalog/view/theme/eshop/css/jquery.fancybox.min.css">
+	<!-- Themify Icons -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/themify-icons.css">
+	<!-- Nice Select CSS -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/niceselect.css">
+	<!-- Animate CSS -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/animate.css">
+	<!-- Flex Slider CSS -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/flex-slider.min.css">
+	<!-- Owl Carousel -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/owl-carousel.css">
+	<!-- Slicknav -->
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/slicknav.min.css">
+	
+	<!-- Eshop StyleSheet -->
+	<link rel="stylesheet" href="catalog/view/theme/eshop/css/reset.css">
+	<link rel="stylesheet" href="catalog/view/theme/eshop/css/style.css">
+	<link rel="stylesheet" href="catalog/view/theme/eshop/css/app/product.css">
+	<link rel="stylesheet" href="catalog/view/theme/eshop/css/app/common-controls.css">
+    <link rel="stylesheet" href="catalog/view/theme/eshop/css/responsive.css">
+
+	<!-- Jquery -->
+    <script src="catalog/view/theme/eshop/js/jquery.min.js"></script>
+    <script src="catalog/view/theme/eshop/js/jquery-migrate-3.0.0.js"></script>
+	<script src="catalog/view/theme/eshop/js/app/app.js" type="text/javascript"></script>
+	<script src="catalog/view/theme/eshop/js/app/cart.js" type="text/javascript"></script>
+
+	{% for script in scripts %}
+	<script src="{{ script }}" type="text/javascript"></script>
+	{% endfor %}
+
+	{% for link in links %}
+	<link href="{{ link.href }}" rel="{{ link.rel }}" />
+	{% endfor %}
+
+	{% for analytic in analytics %}
+	{{ analytic }}
+	{% endfor %}
+	
+</head>
+<body class="js">
+	
+	<!-- Preloader -->
+	<div class="preloader">
+		<div class="preloader-inner">
+			<div class="preloader-icon">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!-- End Preloader -->
+	
+	
+	<!-- Header -->
+	<header class="header shop">
+		<!-- Topbar -->
+		<div class="topbar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<!-- Top Left -->
+						<div class="top-left">
+							<ul class="list-main">
+								{# <li><i class="ti-headphone-alt"></i> {{ cart }}</li> #}
+								<li>
+									<a href="{{ contact }}">
+										<i class="ti-headphone-alt"></i></a>
+										<span class="hidden-xs hidden-sm hidden-md">{{ telephone }}</span>
+								</li>
+								<li><i class="ti-email"></i> support@shophub.com</li>
+								<li>{{ currency }}</li>
+								<li>{{ language }}</li>
+							</ul>
+						</div>
+						<!--/ End Top Left -->
+					</div>
+					<div class="col-lg-6 col-md-12 col-12">
+						<!-- Top Right -->
+						<div class="right-content">
+							<ul class="list-main">
+								<li><i class="ti-location-pin"></i> Store location</li>
+								<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
+								<li class="dropdown">
+									<a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown">
+										<i class="ti-user"></i> <span class="hidden-xs hidden-sm hidden-md">{{ text_account }}</span> <span class="caret"></span></a>
+									<ul class="dropdown-menu dropdown-menu-right">
+										{% if logged %}
+										<li><a href="{{ account }}">{{ text_account }}</a></li>
+										<li><a href="{{ order }}">{{ text_order }}</a></li>
+										<li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+										<li><a href="{{ download }}">{{ text_download }}</a></li>
+										<li><a href="{{ logout }}">{{ text_logout }}</a></li>
+										{% else %}
+										<li><a href="{{ register }}">{{ text_register }}</a></li>
+										<li><a href="{{ login }}">{{ text_login }}</a></li>
+										{% endif %}
+									</ul>
+								</li>
+									
+								<li>
+									<i class="ti-power-off"></i>
+									{% if logged %}
+									<li><a href="{{ logout }}">{{ text_logout }}</a></li>
+									{% else %}
+									<a href="{{ login }}">{{ text_login }}</a>
+
+									{% endif %}
+								</li>
+							</ul>
+						</div>
+						<!-- End Top Right -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Topbar -->
+		<div class="middle-inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-3 col-12">
+						<!-- Logo -->
+						<div class="logo">
+            			{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
+          					<h3><a href="{{ home }}">{{ name }}</a></h3>
+          				{% endif %}
+							{# <a href="index.html"><img src="images/logo.png" alt="logo"></a> #}
+						</div>
+						<!--/ End Logo -->
+						<!-- Search Form -->
+						<div class="search-top">
+							<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
+							<!-- Search Form -->
+							<div class="search-top">
+								<form class="search-form">
+									<input type="text" placeholder="Search here..." name="search">
+									<button value="search" type="submit"><i class="ti-search"></i></button>
+								</form>
+							</div>
+							<!--/ End Search Form -->
+						</div>
+						<!--/ End Search Form -->
+						<div class="mobile-nav"></div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-12">
+						{{search}}
+					</div>
+					<div class="col-lg-2 col-md-3 col-12">
+
+						<ul class="right-bar">
+							<li>
+								<a href="{{ wishlist }}" title="{{ text_wishlist }}" title="{{ text_wishlist }}" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+							<li/>
+							<li>
+								<a href="{{ account }}" class="single-icon">
+								<i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+							<li/>
+							<li id="top-cart-container">
+								{{cart}}
+							<li/>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		{{ menu }}
+	</header>
+	<!--/ End Header -->
