@@ -25,4 +25,12 @@ $(document).ready(() => {
 			$('#search input[name=\'search\']').parent().find('button').trigger('click');
 		}
 	});
+
+	/*====================================
+	18. Nice Select JS
+	======================================*/	
+	// $('select').niceSelect();
+
+	// $("input[type='number']").InputSpinner();
+
 })

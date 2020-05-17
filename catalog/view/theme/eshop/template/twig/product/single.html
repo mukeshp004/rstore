@@ -1,0 +1,64 @@
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4 col-sm-6 col-xs-6">
+      <div class="product product-single">
+          <div class="product-thumb">
+              <div class="product-label">
+                  <span>New</span>
+                  <span class="sale">-20%</span>
+              </div>
+              <a href="{{ product.href }}" class="main-btn quick-view"><i class="fa fa-search-plus"></i> view</a>
+              <img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-responsive" />
+          </div>
+          <div class="product-body">
+              {% if product.price %}
+              <h3 class="price">
+                {% if  not product.special %}
+                {{ product.price }}
+                {% else %}
+                {{ product.special }} <del class="product-old-price">{{ product.price }}</del>
+                {% endif %}
+                
+              </h3>
+              {% endif %}
+              
+              <p class="d-none">
+              {% if product.tax %}
+                <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
+                {% endif %}
+              </p>
+
+              {% if product.rating %}
+              <div class="product-rating">
+                {% for i in 1..5 %}
+                {% if product.rating < i %}
+                <i class="fa fa-star"></i>
+                {% else %}
+                <i class="fa fa-star-o empty"></i>
+                {% endif %}
+                {% endfor %}
+              </div>
+              {% endif %}
+
+              {# <div class="product-rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-o empty"></i>
+              </div> #}
+
+              <h2 class="product-name">
+                <a href="{{ product.href }}">{{ product.name }}</a>
+              </h2>
+              <div class="product-btns">
+                  <button class="main-btn icon-btn" title="{{ button_wishlist }}" onclick="wishlist.add('{{ product.product_id }}');"><i class="fa fa-heart"></i></button>
+                  <button class="main-btn icon-btn"  title="{{ button_compare }}" onclick="compare.add('{{ product.product_id }}');"><i class="fa fa-exchange"></i></button>
+                  
+                  <button class="primary-btn add-to-cart"  onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  {% endfor %}
+</div>

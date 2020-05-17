@@ -1,7 +1,7 @@
 {{ header }}
 
 <!-- Breadcrumbs -->
-<div class="breadcrumbs">
+{# <div class="breadcrumbs">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -15,7 +15,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> #}
+
+{{ include('eshop/template/twig/common/breadcrum.html', with_context = true) }}
 <!-- End Breadcrumbs -->
 
 
@@ -132,8 +134,9 @@
                     </div>
                 </div>
 
-                <!-- product list --> 
-                <div class="row">
+                <!-- product list -->
+                {{ include('eshop/template/twig/product/single.html', with_context = true) }}
+                {# <div class="row">
                     {% for product in products %}
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="single-product">
@@ -170,7 +173,7 @@
                         </div>
                     </div>
                     {% endfor %} 
-                </div>
+                </div> #}
                 <!-- product list --> 
                 {% endif %}
             </div>

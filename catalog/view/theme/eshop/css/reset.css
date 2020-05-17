@@ -286,7 +286,8 @@ big {
 .breadcrumbs {
 	background-color: #F6F7FB;
 	position: relative;
-	padding: 30px 0px;
+	padding: 20px 0px;
+	margin-bottom: 20px;
 }
 .breadcrumbs .bread-inner {
 	z-index: 22;
